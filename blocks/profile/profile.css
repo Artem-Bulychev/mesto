@@ -1,0 +1,9 @@
+.profile {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  max-width: 880px;
+  width: 100%;
+  padding: 0px 0 50px;
+  margin: 0 auto;
+}
