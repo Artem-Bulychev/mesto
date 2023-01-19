@@ -1,9 +1,18 @@
 .profile__title {
-  max-width: 294px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-size: 42px;
   line-height: 48px;
-  color: #FFFFFF;
+  max-width: 294px;
+  color: #FFFFFF; 
+  margin: 0 0 16px;
+}
+
+@media screen  and (max-width: 600px) {
+  .header  {
+    max-width: 189px;
+    font-size: 27px;
+    line-height: 33px;
+  }
 }

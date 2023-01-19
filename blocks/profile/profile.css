@@ -4,6 +4,14 @@
   flex-direction: row;
   max-width: 880px;
   width: 100%;
-  padding: 0px 0 50px;
+  padding: 40px 0 50px;
   margin: 0 auto;
+}
+
+
+@media screen  and (max-width: 600px) {
+  .header  {
+    max-width: 282px;
+    padding-bottom: 36px;
+  }
 }

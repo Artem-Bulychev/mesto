@@ -1,0 +1,8 @@
+.footer {
+  display: flex;
+  font-family: 'Inter', Arial, sans-serif;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 880px;
+  margin: 67px auto;
+}
