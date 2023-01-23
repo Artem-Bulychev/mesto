@@ -9,8 +9,8 @@ let popupElement = document.querySelector('.popup');
 let formElement = document.querySelector('.popup__form-container');
 let popupClose = document.querySelector('.popup__close');
 let popupSave = document.querySelector('.popupSave');  
-let popupInputName = document.querySelector('.popup__name_input');
-let popupInputJob = document.querySelector('.popup__job_input'); 
+let popupInputName = document.querySelector('.popup__profile');
+let popupInputJob = document.querySelector('.popup__job'); 
 
 // Открытие 
 
