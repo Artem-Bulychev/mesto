@@ -1,7 +1,12 @@
 .elements__like {
-  background-image: url(../../../images/Vector.svg);
+  background-image: url(../../../images/Vector__like.svg);
   height: 19px;
   width: 22px;
   background-color: white; 
   border: none;
+  cursor: pointer;
+}
+
+.elements__like:hover {
+  opacity: 0.4;
 }

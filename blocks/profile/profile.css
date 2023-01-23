@@ -9,9 +9,11 @@
 }
 
 
-@media screen  and (max-width: 600px) {
-  .header  {
-    max-width: 282px;
-    padding-bottom: 36px;
+@media screen  and (max-width: 898px) {
+  .profile  {
+    max-width: 500px;
+    flex-direction: column;
+    margin: 42px auto 36px;
+    align-items: center;
   }
 }

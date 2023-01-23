@@ -11,3 +11,17 @@
   background-position: center;
   cursor: pointer;
 }
+
+.profile__rectangle:hover {
+  opacity: 0.8;
+}
+
+@media screen  and (max-width: 898px) {
+  .profile__rectangle {
+    min-width: 18px;
+    height: 18px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+  }
+}
