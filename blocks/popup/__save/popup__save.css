@@ -4,6 +4,7 @@
   max-width: 358px;
   height: 50px;
   background: #000000;
+  border: 0;
   border-radius: 2px;
   font-family: 'Inter';
   font-style: normal;
@@ -17,4 +18,14 @@
 
 .popup__save:hover {
   opacity: 0.8;
+}
+
+@media screen  and (max-width: 898px) {
+  .popup__save {
+    max-width: 238px;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17px;
+
+  }
 }

@@ -3,3 +3,11 @@
   margin-right: 35px;
   margin-bottom: 37px;
 }
+
+@media screen  and (max-width: 898px) {
+  .popup__form-container {
+    margin-left: 22px;
+    margin-right: 22px;
+    margin-bottom: 25px;
+  }
+}

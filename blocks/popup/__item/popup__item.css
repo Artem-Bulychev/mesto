@@ -1,8 +1,7 @@
-.popup__name {
+.popup__item {
   width: 100%;
   max-width: 358px;
   min-height: 35px;
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -10,4 +9,11 @@
   color: #000000;
   border: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 0px;
+  padding: 0px;
+}
+
+.popup__item:nth-child(2) {
+  margin-top: 21px;
+  margin-bottom: 48px;
 }

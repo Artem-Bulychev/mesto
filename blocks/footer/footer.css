@@ -1,6 +1,6 @@
 .footer {
   display: flex;
-  font-family: 'Inter', Arial, sans-serif;
+  padding: 0;
   flex-direction: row;
   align-items: flex-start;
   max-width: 880px;

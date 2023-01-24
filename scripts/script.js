@@ -9,8 +9,8 @@ let popupElement = document.querySelector('.popup');
 let formElement = document.querySelector('.popup__form-container');
 let popupClose = document.querySelector('.popup__close');
 let popupSave = document.querySelector('.popupSave');  
-let popupInputName = document.querySelector('.popup__profile');
-let popupInputJob = document.querySelector('.popup__job'); 
+let popupInputName = document.querySelector('.popup__item_profile');
+let popupInputJob = document.querySelector('.popup__item_job'); 
 
 // Открытие 
 
@@ -45,14 +45,3 @@ let handleFormSubmit = function (event) {
 formElement.addEventListener('submit', handleFormSubmit);
 
 // Реализация like-active 
-
-let likeActive = document.querySelector('.elements__like');
-let likeActiveColor = document.querySelector('.elements__like-active') 
-
-
-likeActive.addEventListener('click', function (event) {
-  const ev = event.target.closest('likeActiveColor');
-  if (ev) {
-    ev.classList.toggle('.elements__like-active');
-  }
-}); 
