@@ -1,5 +1,5 @@
 .profile__button {
-  background-image: url(../../../images/Vector.svg);
+  background-image: url(../../../images/Add\ Button.svg);
   background-position: center;
   padding: 0;
   width: 150px;
@@ -11,7 +11,6 @@
   box-sizing: border-box;
   border: 2px solid #FFFFFF;
   border-radius: 2px;
-  
 }
 
 .profile__button:hover {
@@ -24,6 +23,5 @@
     max-width: 320px;
     width: 282px;
     margin-top: 32px;
-    background-size: 16px;
   }
 }
