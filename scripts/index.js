@@ -5,10 +5,10 @@ const profileName = document.querySelector('.profile__title');
 const profileJob = document.querySelector('.profile__subtitle');
 
 // Объявление переменных для popup
-const popupElement = document.querySelector('.popup'); 
+const popupProfile = document.querySelector('.popup_type_profile'); 
 const formElement = document.querySelector('.popup__form-container');
 const popupClose = document.querySelectorAll('.popup__close');
-const popupSave = formElement.querySelector('.popupSave');  
+const popupSave = document.querySelector('.popupSave');  
 const popupInputName = document.querySelector('.popup__item_type_profile');
 const popupInputJob = document.querySelector('.popup__item_type_job'); 
 
@@ -32,7 +32,7 @@ const createCards = document.querySelector('.popup__save_cards');
 
 // Открытие 
 const popupOpen = function() {
-  popupElement.classList.add('popup_opened'); 
+  popupProfile.classList.add('popup_opened'); 
   popupInputName.value = profileName.textContent; 
   popupInputJob.value = profileJob.textContent; 
 }
@@ -58,7 +58,7 @@ const handleFormSubmit = function (event) {
   event.preventDefault();
   profileName.textContent = popupInputName.value ; 
   profileJob.textContent = popupInputJob.value; 
-  popupClosed ();
+  popupClosed (popupProfile);
 };
 
 // Отправка формы профиля
