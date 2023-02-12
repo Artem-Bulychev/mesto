@@ -25,50 +25,7 @@
         <button class="profile__button" type="button"></button>
       </section>
       <section class="elements">
-        <ul class="elements__list">
-          <li class="elements__item">
-            <img class="elements__photo" src="./images/newzeland.jpg" alt="Новая Зеландия" />
-            <div class="elements__text">
-              <h2 class="elements__title">Витианга</h2>
-              <button class="elements__like" type="button"></button>
-            </div>
-          </li>
-          <li class="elements__item">
-            <img class="elements__photo" src="./images/tbilisi.jpg" alt="Тбилиси" />
-            <div class="elements__text">
-              <h2 class="elements__title">Тбилиси</h2>
-              <button class="elements__like" type="button"></button>
-            </div>
-          </li>
-          <li class="elements__item">
-            <img class="elements__photo" src="./images/batumi.jpg" alt="Батуми" />
-            <div class="elements__text">
-              <h2 class="elements__title">Батуми</h2>
-              <button class="elements__like" type="button"></button>
-            </div>
-          </li>
-          <li class="elements__item">
-            <img class="elements__photo" src="./images/Almati.jpg" alt="Алматы" />
-            <div class="elements__text">
-              <h2 class="elements__title">Алматы</h2>
-              <button class="elements__like" type="button"></button>
-            </div>
-          </li>
-          <li class="elements__item">
-            <img class="elements__photo" src="./images/lisboa.jpg" alt="Лиссабон" />
-            <div class="elements__text">
-              <h2 class="elements__title">Лиссабон</h2>
-              <button class="elements__like" type="button"></button>
-            </div>
-          </li>
-          <li class="elements__item">
-            <img class="elements__photo" src="./images/porto.jpg" alt="Порто" />
-            <div class="elements__text">
-              <h2 class="elements__title">Порто</h2>
-              <button class="elements__like" type="button"></button>
-            </div>
-          </li>
-        </ul>
+        <ul class="elements__list"></ul>
       </section>
     </main>
     <footer class="footer">
@@ -85,6 +42,37 @@
         <button class="popup__close" type="button"></button>
       </div>
     </section>
-    <script src="./scripts/script.js"></script>
+    <section class="popup popup__cards">
+      <div class="popup__form">
+        <h2 class="popup__title">Новое место</h2>
+        <form class="popup__form-container" name="form">
+          <input class="popup__item popup__item_type_card" type="text" name="card" placeholder="Название" />
+          <input class="popup__item popup__item_type_link" type="text" name="link" placeholder="Ссылка на картинку" />
+          <button class="popup__save popup__save_cards" type="submit">Создать</button>
+        </form>
+        <button class="popup__close" type="button"></button>
+      </div>
+    </section>
+    <section class="popup popup__image">
+      <div class="popup__image-container">  
+        <button class="popup__close" type="button"></button>
+        <figure class="popup__image-element">
+          <img class="popup__image-photo" src="." alt=".">
+          <figcaption class="popup__image-main"></figcaption>
+        </figure>
+      </div>
+    </section>
+    <template id="template-cards">
+        <li class="elements__item">
+          <button class="elements__delete" type="button"></button>
+          <img class="elements__photo" src="." alt="" />
+          <div class="elements__text">
+          <h2 class="elements__title"></h2>
+          <button class="elements__like" type="button"></button>
+          </div>
+        </li>
+    </template>
+    <script src="./scripts/cards.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
