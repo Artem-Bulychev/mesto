@@ -13,7 +13,7 @@ const popupInputName = document.querySelector('.popup__item_type_profile');
 const popupInputJob = document.querySelector('.popup__item_type_job'); 
 
 // Добавление открытия фотографии 
-const popupImage = document.querySelector('.popup__image'); 
+const popupImage = document.querySelector('.popup_type_image'); 
 const photoLink = popupImage.querySelector('.popup__image-photo'); 
 const photoMain = popupImage.querySelector('.popup__image-main'); 
 
@@ -23,7 +23,7 @@ const listElements = document.querySelector('.elements__list');
 const buttonElements = document.querySelector('.elements__like'); 
 
 // Добавление карточек 
-const initialCardsElements = document.querySelector('.popup__cards'); 
+const initialCardsElements = document.querySelector('.popup_type_cards'); 
 const cardsContainer = initialCardsElements.querySelector('.popup__form-container'); 
 const buttonCardsElements = document.querySelector('.profile__button'); 
 const popupInputCard = cardsContainer.querySelector('.popup__item_type_card'); 
