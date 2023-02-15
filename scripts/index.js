@@ -72,7 +72,7 @@ cardPopup.addEventListener('submit', (e) => {
 
   templateList.prepend(card); 
   e.target.reset(); 
-
+  closePopup(cardPopup); 
 });
 
 
