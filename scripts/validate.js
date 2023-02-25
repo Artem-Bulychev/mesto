@@ -8,10 +8,10 @@ const showError = (formElement, inputElement, errorMessage, config) => {
 
 // Функция удаления класса с error
 const hideError = (formElement, inputElement, config) => {
-  const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
+  const error = formElement.querySelector(`.${inputElement.id}-error`);
   inputElement.classList.remove(config.inputErrorClass);
-  errorElement.textContent = "";
-  errorElement.classList.remove(config.errorClass);
+  error.textContent = "";
+  error.classList.remove(config.errorClass);
 };
 
 // Функция проверки валидности
@@ -25,14 +25,14 @@ const checkValidity = (formElement, inputElement, config) => {
 
 // Функция проверки на каждый вводимый символ в поле
 const setEventListeners = (formElement, config) => {
-  const inputList = Array.from(formElement.querySelectorAll(config.inputSelector));
-  const buttonSubmit = formElement.querySelector(config.submitButtonSelector);
-  toggleButton(inputList, buttonSubmit, config);
+  const list = Array.from(formElement.querySelectorAll(config.inputSelector));
+  const btnSubmit = formElement.querySelector(config.submitButtonSelector);
+  toggleButton(list, btnSubmit, config);
 
-  inputList.forEach((inputElement) => {
+  list.forEach((inputElement) => {
     inputElement.addEventListener("input", () => {
       checkValidity(formElement, inputElement, config);
-      toggleButton(inputList, buttonSubmit, config);
+      toggleButton(list, btnSubmit, config);
     });
   });
 };
@@ -62,15 +62,15 @@ const checkInvalid = (inputList) => {
 };
 
 const enableValidation = (config) => {
-  const formList = Array.from(document.querySelectorAll(".popup"));
-  formList.forEach((formElem) => {
+  const list = Array.from(document.querySelectorAll(".popup"));
+  list.forEach((formElem) => {
     formElem.addEventListener("submit", function (evt) {
       evt.preventDefault();
     });
-    const fieldsetList = Array.from(
+    const fieldList = Array.from(
       formElem.querySelectorAll(config.formSelector)
     );
-    fieldsetList.forEach((field) => {
+    fieldList.forEach((field) => {
       setEventListeners(field, config);
     });
   });
