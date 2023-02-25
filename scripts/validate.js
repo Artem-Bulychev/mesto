@@ -1,5 +1,3 @@
-
-
 // Функция добавления класса с error
 const showError = (formElement, inputElement, errorMessage, config) => {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
@@ -39,13 +37,13 @@ const setEventListeners = (formElement, config) => {
   });
 };
 
-function setsubmitbutton(button, isValid) {
+function submitButton(button, isValid) {
   button.disabled = !isValid;
 }
 
 // Функция активной/неактивной кнопки 
 const toggleButton = (inputList, buttonSubmit, config) => {
-  if (checkInvalidInput(inputList, config)) {
+  if (checkInvalid(inputList, config)) {
 
     buttonSubmit.disabled = true;
     buttonSubmit.classList.add(config.inactiveButtonClass);
@@ -57,7 +55,7 @@ const toggleButton = (inputList, buttonSubmit, config) => {
 
 
 // Функция массива полей
-const checkInvalidInput = (inputList) => {
+const checkInvalid = (inputList) => {
   return inputList.some((inputElement) => {
     return !inputElement.validity.valid;
   });
