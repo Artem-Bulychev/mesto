@@ -34,9 +34,15 @@
     <section class="popup popup_type_profile">
       <div class="popup__form">
         <h2 class="popup__title">Редактировать профиль</h2>
-        <form class="popup__form-container" name="form">
-          <input class="popup__item popup__item_type_profile" type="text" name="profile" />
-          <input class="popup__item popup__item_type_job" type="text" name="job" />
+        <form class="popup__form-container popup__form_type_profile" name="form">
+          <label class="popup__field">
+            <input id="profile-name-input" class="popup__item popup__item_type_profile" type="text" name="profile" minlength="2" maxlength="40" required="" />
+            <span class="profile-name-input-error popup__item-error">Вы пропустили это поле</span>
+        </label>
+        <label class="popup__field">
+          <input id="job-name-input" class="popup__item popup__item_type_job" type="text" name="job" minlength="2" maxlength="200" required="" />
+          <span class="job-name-input-error popup__item-error">Вы пропустили это поле</span>
+        </label>
           <button class="popup__save" type="submit">Сохранить</button>
         </form>
         <button class="popup__close" type="button"></button>
@@ -45,9 +51,15 @@
     <section class="popup popup_type_cards">
       <div class="popup__form">
         <h2 class="popup__title">Новое место</h2>
-        <form class="popup__form-container" name="form">
-          <input class="popup__item popup__item_type_card" type="text" name="card" placeholder="Название" />
-          <input class="popup__item popup__item_type_link" type="text" name="link" placeholder="Ссылка на картинку" />
+        <form class="popup__form-container popup__form_type_card" name="form">
+          <label class="popup__field">
+            <input id="card-name-input" class="popup__item popup__item_type_card" type="text" name="card" placeholder="Название" minlength="2" maxlength="30" required=""/>
+            <span class="card-name-input-error popup__item-error">Вы пропустили это поле</span>
+          </label>
+          <label class="popup__field">
+          <input id="link-name-input" class="popup__item popup__item_type_link" type="url" name="link" placeholder="Ссылка на картинку" required=""/>
+            <span class="link-name-input-error popup__item-error">Вы пропустили это поле</span>
+          </label>
           <button class="popup__save popup__save_cards" type="submit">Создать</button>
         </form>
         <button class="popup__close" type="button"></button>
@@ -74,5 +86,6 @@
     </template>
     <script src="./scripts/cards.js"></script>
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/validate.js"></script>
   </body>
 </html>

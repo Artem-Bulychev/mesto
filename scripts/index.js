@@ -29,19 +29,32 @@ const cardImage = cardsContainer.querySelector('.popup__item_type_link');
 // Открытие 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
+  document.addEventListener('keydown', closeByEscape); // слушатель Esc
 }
 
 // Закрытие попапа по кнопке
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
+  document.removeEventListener('keydown', closeByEscape); // Удаление события Esc
 }
 
-//Обработчик события при закрытии на крестик 
+//Закрытия попапа по "Escape" 
+function closeByEscape(evt) {
+  if (evt.key === 'Escape') {
+    const openedPopup = document.querySelector('.popup_opened');
+    closePopup(openedPopup); 
+  }
+}
+
+//Обработчик события при закрытии на крестик и внешней области  
 closeButtons.forEach(closeButtons => {
   const popup = closeButtons.closest('.popup'); 
-  closeButtons.addEventListener('click', () => closePopup(popup)); 
+  popup.addEventListener('click', function (evt) {
+    if (evt.target === evt.currentTarget || evt.target === closeButtons) {
+      closePopup(popup);
+    }
 }); 
-
+}); 
 
 // Открытие попапа профиля
 profileOpenButton.addEventListener('click', function(){
